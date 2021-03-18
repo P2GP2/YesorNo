@@ -30,15 +30,14 @@
 
 ```
 - Trigger "connection"
-  - on "getId" store state list player
-  - and if user's state id is empty (''), fill with last player id
+  - on "listPlayer" store state list player
   - tampung list player on WaitingList array
-- Trigger "ready" with state id
+- Trigger "ready"
 - On "startGame"
   - fill store question with question sent by server
   - fill store ListPlayer array with WaitingList array
   - when ListPlayer is filled, game will be start
-- Trigger "answer" with data ({id, answer}) related button clicked
+- Trigger "answer" with data ({answer}) related button clicked
 - Trigger "timeOut"
 - On "newRound"
   - update state question and listPlayer
@@ -70,12 +69,14 @@
 [
   {
     "id": "string",
+    "initial": "string",
     "isReady": "booelan",
     "isAlive": "boolean",
     "answer": "boolean"
   },
   {
     "id": "string",
+    "initial": "string",
     "isReady": "booelan",
     "isAlive": "boolean",
     "answer": "boolean"
@@ -87,15 +88,14 @@
 
 ```
 - On "connection"
-  - check last id on Player data
   - append new user with basic state
-  - send (broadcast) "getId" with data list player
+  - send (broadcast) "listPlayer" with data list player
 - On "ready"
-  - change ready state of user with related id
+  - change ready state of user
   - check all ready state of player list,
-    if all player ready, send "startGame" with first
+    if all player ready, send (broadcast) "startGame" with first question
 - On "answer"
-  - change answer state to related id
+  - change answer state to related user
 - On "timeOut"
   - check all player, if answer is wrong, change isAlive state of player
   - count listPlayer,
