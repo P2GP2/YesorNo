@@ -9,10 +9,12 @@ export default new Vuex.Store({
     isGame: false,
     isAlive: false,
     players: [],
+    question: "",
+    timeCounter: 7,
+    gamePaused: false,
     // divider
     isReady: false,
     timeOut: false,
-    questions: [],
   },
   mutations: {
     emptyUserId(state) {
@@ -24,6 +26,23 @@ export default new Vuex.Store({
     },
     players(state, payload) {
       state.players = payload;
+    },
+    gameOn(state, payload) {
+      state.isGame = true;
+      state.players = payload.players;
+      state.question = payload.question;
+    },
+    changeCounter(state, payload) {
+      state.timeCounter = payload;
+    },
+    timeCounter(state) {
+      const interval = setInterval(() => {
+        state.timeCounter--;
+        if (state.timeCounter === 0) {
+          clearInterval(interval);
+          state.gamePaused = !state.gamePaused;
+        }
+      }, 1000);
     },
     //divider
     startTime(state, payload) {
@@ -39,6 +58,12 @@ export default new Vuex.Store({
     },
   },
   getters: {
+    playersTrue(state) {
+      return state.players.filter((player) => player.answer);
+    },
+    playersFalse(state) {
+      return state.players.filter((player) => !player.answer);
+    },
     isReady(state) {
       return state.players.filter((player) => {
         return player.id === state.userId;

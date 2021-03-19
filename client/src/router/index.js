@@ -20,6 +20,11 @@ const routes = [
         name: "WaitingRoom",
         component: () => import("../views/children/WaitingRoom.vue"),
       },
+      {
+        path: "/game",
+        name: "Game",
+        component: () => import("../views/children/Game.vue"),
+      },
     ],
   },
 ];
