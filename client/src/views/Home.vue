@@ -27,14 +27,13 @@
                     data-holder-rendered="true" style="width: 80px" >
                 </div>
               </div>
+                <ButtonTrue />
           </div>
+
           <div class="col-sm">
             
             <div class="d-flex flex-row justify-content-start" style="position: relative;top: 12vh;min-height: 11vh; max-height: 20vh;">
-                <div class="p-2">
-                    <img class="rounded-circle" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
-                    data-holder-rendered="true" style="width: 80px">
-                </div>
+                <Avatar />
                 <div class="p-2">
                     <img class="rounded-circle" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg"
                     data-holder-rendered="true" style="width: 80px">
@@ -44,6 +43,7 @@
                     data-holder-rendered="true" style="width: 80px" >
                 </div>
               </div>
+              <ButtonFalse />
           </div>
         </div>
       </div>
@@ -58,13 +58,17 @@
 import ButtonReady from '@/components/ButtonReady'
 import Question from '@/components/QuestionBox'
 import Avatar from '@/components/Avatar'
+import ButtonTrue from '@/components/ButtonTrue'
+import ButtonFalse from '@/components/ButtonFalse'
 
 export default {
   name: 'Home',
   components: {
     ButtonReady,
     Question,
-    Avatar
+    Avatar,
+    ButtonTrue,
+    ButtonFalse
   }
 }
 </script>

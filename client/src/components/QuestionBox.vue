@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-card class="text-center position-sticky w-50 h-auto"
+    <b-card class="text-center position-sticky w-50 h-auto" style="height: 15vh;"
     v-show="isReady"
     >
       <b-card-text class="">{{questions}}</b-card-text>
@@ -10,6 +10,7 @@
     :size="120"
     :padding="10"
     :paused="!isReady"
+    style="width: 102px; height: 120px; padding-top: 10px; margin: 0px auto; box-sizing: border-box;top: -4vh;position: relative;"
     ></circular-count-down-timer>
     </b-card>
 
