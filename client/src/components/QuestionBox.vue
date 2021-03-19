@@ -12,14 +12,19 @@
     :paused="!isReady"
     style="width: 102px; height: 120px; padding-top: 10px; margin: 0px auto; box-sizing: border-box;top: -4vh;position: relative;"
     ></circular-count-down-timer>
-    </b-card>
 
+    </b-card>
+    <Timer/>
   </div>
 </template>
 
 <script>
 
+import Timer from './Timer.vue'
 export default {
+  components: {
+    Timer
+  },
   data () {
     return {
       round: 10
@@ -28,15 +33,6 @@ export default {
   computed: {
     isReady () {
       return this.$store.state.isReady
-    },
-    isTimeOut () {
-      return this.$store.state.isReady
-    },
-    questions () {
-      const index = Math.floor(Math.random() * this.$store.state.questions.length)
-      let question = this.$store.state.questions[index]
-      console.log(index, question)
-      return question
     }
   }
 }

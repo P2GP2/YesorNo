@@ -1,8 +1,7 @@
 <template>
   <div class="home container">
-    <!-- Button Ready & Question section -->
     <div class="d-block flex-column align-items-center">
-      
+      <!-- from template -->
       <div class="container-fluid" style="height: 100vh;margin-top: 2vh;margin-bottom: 2vh;">
         <!-- ------------------------------------------ BUTTON START ------------------------------------------ -->
         <div id="ready-btn" style="position: absolute;z-index: 1;left: 45vw;top:2vh; background-color: white">
@@ -47,14 +46,15 @@
           </div>
         </div>
       </div>
-      
+      <!-- from template -->
+
+      <router-view></router-view>
+
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
 import ButtonReady from '@/components/ButtonReady'
 import Question from '@/components/QuestionBox'
 import Avatar from '@/components/Avatar'
@@ -69,6 +69,14 @@ export default {
     Avatar,
     ButtonTrue,
     ButtonFalse
-  }
-}
+  },
+  sockets: {
+    joined(payload) {
+      this.$store.commit("joined", payload);
+    },
+    players(payload) {
+      this.$store.commit("players", payload);
+    },
+  },
+};
 </script>

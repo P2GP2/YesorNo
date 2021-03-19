@@ -29,19 +29,30 @@
 ### Socket event (client):
 
 ```
-- Trigger "connection"
-  - on "listPlayer" store state list player
-  - tampung list player on WaitingList array
+- Intial state
+  {
+    userId: '',
+    isGame: false,
+    isAlive: true,
+    players: []
+  }
+- Trigger "join"
+  - send name to server
+  - on "joined" store state palyers and userId
 - Trigger "ready"
-- On "startGame"
+  - on "players" store state palyers
+- On "gameOn"
   - fill store question with question sent by server
-  - fill store ListPlayer array with WaitingList array
-  - when ListPlayer is filled, game will be start
+  - change state isGame to true, game will be start
 - Trigger "answer" with data ({answer}) related button clicked
-- Trigger "timeOut"
+- Trigger "timeOut" with trueAnswer data
 - On "newRound"
-  - update state question and listPlayer
-  - (on view) if current player is not alive, they can't push button
+  - update state question and players
+  - update user isAlive state on client
+  - (on view) if current player is not alive, they will be spectate
+- On "winner"
+  - show modal winner
+  - change state to initial state
 ```
 
 ## Server
@@ -89,11 +100,11 @@
 ```
 - On "connection"
   - append new user with basic state
-  - send (broadcast) "listPlayer" with data list player
+  - send (broadcast) "players" with data list player
 - On "ready"
   - change ready state of user
   - check all ready state of player list,
-    if all player ready, send (broadcast) "startGame" with first question
+    if all player ready, send (broadcast) "gameOn" with first question
 - On "answer"
   - change answer state to related user
 - On "timeOut"
