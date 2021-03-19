@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="shadow p-2 bg-white rounded-lg">
     <b-form @submit.prevent="onSubmit">
       <b-form-group label="Name :" label-for="name">
         <b-form-input

@@ -61,7 +61,7 @@ io.on("connection", (socket) => {
 
     // check remain player
     if (players.length === 1) {
-      io.emit("winner", player.name);
+      io.emit("winner", players[0].name);
       players = [];
     } else {
       counter++;

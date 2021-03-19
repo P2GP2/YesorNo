@@ -1,37 +1,32 @@
 <template>
   <b-col
     class="border position-relative"
-    style="height: 100vh; background-color: gray;"
+    style="height: 100vh; background-color: #f8f5f1;"
   >
-    <ul>
+    <ul style="margin-top: 30%">
       <li v-for="player in players" :key="player.id">
         <span :class="getListClass(player)">
           {{ player.name }}
         </span>
       </li>
     </ul>
-    <b-btn
-      v-if="isGame && !gamePaused"
-      type="button"
-      :variant="btnVariant"
+    <ButtonAnswer
+      :boardState="boardState"
+      v-if="isGame && isAlive && !gamePaused"
       class="position-absolute"
       style="bottom: 8%;left: 40%;"
-      @click="answer"
-    >
-      {{ btnText }}
-    </b-btn>
+    ></ButtonAnswer>
   </b-col>
 </template>
 
 <script>
+import ButtonAnswer from "../components/ButtonAnswer";
+
 export default {
   name: "Board",
   props: ["boardState"],
-  data() {
-    return {
-      btnVariant: this.boardState ? "primary" : "danger",
-      btnText: this.boardState ? "Yes" : "No",
-    };
+  components: {
+    ButtonAnswer,
   },
   methods: {
     getListClass(player) {
@@ -52,6 +47,9 @@ export default {
     },
     gamePaused() {
       return this.$store.state.gamePaused;
+    },
+    isAlive() {
+      return this.$store.state.isAlive;
     },
   },
 };
