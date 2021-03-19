@@ -15,12 +15,6 @@ export default {
     isTimeOut () {
       return this.$store.state.isReady
     },
-    questions () {
-      const index = Math.floor(Math.random() * this.$store.state.questions.length)
-      let question = this.$store.state.questions[index]
-      console.log(index, question)
-      return question
-    },
     setTimer () {
       // buat set ulang timer
       return this.$store.state.setTime

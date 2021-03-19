@@ -32,7 +32,23 @@ export default {
   },
   computed: {
     isReady () {
+      return this.$store.getters.isReady
+    },
+    isTimeOut () {
       return this.$store.state.isReady
+    }
+  },
+  sockets: {
+    gameOn (question) {
+      // const index = Math.floor(Math.random() * this.$store.state.questions.length)
+      // let question = this.$store.state.questions[index]
+      // console.log(index, question)
+      return question
+    }
+  },
+  methods: {
+    questions () {
+      return this.gameOn
     }
   }
 }
