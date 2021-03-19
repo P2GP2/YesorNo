@@ -1,35 +1,36 @@
 <template>
-    <circular-count-down-timer
-    :initial-value="setTimer"
-    :steps="7"
-    :size="120"
-    :padding="10"
-    :paused="!isTimeOut"
-    @updated='checkTimer'
-    ></circular-count-down-timer>
+  <div>
+    <b-card class="text-center">
+      <b-card-text>{{ timeCounter }}</b-card-text>
+    </b-card>
+  </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    isTimeOut () {
-      return this.$store.state.isReady
-    },
-    setTimer () {
-      // buat set ulang timer
-      return this.$store.state.setTime
-    }
-  },
+  name: "Timer",
   methods: {
-    checkTimer (status) {
-      if (status.value === 0) {
-        // logic check jawaban
+    changeCounter() {
+      if (this.$store.state.isGame) {
+        if (!this.gamePaused) {
+          this.$socket.emit("timeOut", this.$store.state.question.answer);
+        } else {
+          this.$store.commit("changeCounter", 3);
+          this.$store.commit("timeCounter");
+        }
       }
-    }
-  }
-}
+    },
+  },
+  computed: {
+    timeCounter() {
+      if (this.$store.state.timeCounter === 0) {
+        this.changeCounter();
+      }
+      return this.$store.state.timeCounter;
+    },
+    gamePaused() {
+      return this.$store.state.gamePaused;
+    },
+  },
+};
 </script>
-
-<style>
-
-</style>

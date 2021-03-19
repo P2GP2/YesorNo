@@ -7,14 +7,11 @@ export default new Vuex.Store({
   state: {
     userId: "",
     isGame: false,
-    isAlive: false,
+    isAlive: true,
     players: [],
-    // divider
-    isReady: false,
-    timeOut: false,
-    setTime: 10,
-    questions: [],
-    isWinner: false
+    question: "",
+    timeCounter: 7,
+    gamePaused: false,
   },
   mutations: {
     emptyUserId(state) {
@@ -26,6 +23,40 @@ export default new Vuex.Store({
     },
     players(state, payload) {
       state.players = payload;
+    },
+    gameOn(state, payload) {
+      state.isGame = true;
+      state.players = payload.players;
+      state.question = payload.question;
+      if (
+        state.players.findIndex((player) => player.id === state.userId) === -1
+      ) {
+        state.isAlive = false;
+      }
+    },
+    changeCounter(state, payload) {
+      state.timeCounter = payload;
+    },
+    timeCounter(state) {
+      const interval = setInterval(() => {
+        state.timeCounter--;
+        if (state.timeCounter === 0) {
+          clearInterval(interval);
+          state.gamePaused = !state.gamePaused;
+        }
+      }, 1000);
+    },
+    gamePaused(state) {
+      state.gamePaused = !state.gamePaused;
+    },
+    winner(state) {
+      state.userId = "";
+      state.isGame = false;
+      state.isAlive = true;
+      state.players = [];
+      state.question = "";
+      state.timeCounter = 7;
+      state.gamePaused = false;
     },
     //divider
     startTime(state, payload) {
@@ -41,6 +72,12 @@ export default new Vuex.Store({
     },
   },
   getters: {
+    playersTrue(state) {
+      return state.players.filter((player) => player.answer);
+    },
+    playersFalse(state) {
+      return state.players.filter((player) => !player.answer);
+    },
     isReady(state) {
       return state.players.filter((player) => {
         return player.id === state.userId;

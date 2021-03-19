@@ -1,59 +1,29 @@
 <template>
   <div>
-    <b-card class="text-center position-sticky w-50 h-auto" style="height: 15vh;"
-    v-show="isReady"
-    >
-      <b-card-text class="">{{questions}}</b-card-text>
-    <circular-count-down-timer
-    :initial-value="10"
-    :steps="7"
-    :size="120"
-    :padding="10"
-    :paused="!isReady"
-    style="width: 102px; height: 120px; padding-top: 10px; margin: 0px auto; box-sizing: border-box;top: -4vh;position: relative;"
-    ></circular-count-down-timer>
-
+    <b-card class="text-center">
+      <b-card-text :class="classAnswer">{{ question }}</b-card-text>
     </b-card>
-    <Timer/>
   </div>
 </template>
 
 <script>
-
-import Timer from './Timer.vue'
 export default {
-  components: {
-    Timer
-  },
-  data () {
-    return {
-      round: 10
-    }
-  },
+  name: "QuestionBox",
   computed: {
-    isReady () {
-      return this.$store.getters.isReady
+    question() {
+      return this.$store.state.gamePaused
+        ? this.$store.state.question.question
+        : this.$store.state.question.statement;
     },
-    isTimeOut () {
-      return this.$store.state.isReady
-    }
+    classAnswer() {
+      return !this.$store.state.gamePaused
+        ? ""
+        : this.$store.state.question.answer
+        ? "text-success"
+        : "text-danger";
+    },
   },
-  sockets: {
-    gameOn (question) {
-      // const index = Math.floor(Math.random() * this.$store.state.questions.length)
-      // let question = this.$store.state.questions[index]
-      // console.log(index, question)
-      return question
-    }
-  },
-  methods: {
-    questions () {
-      return this.gameOn
-    }
-  }
-}
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

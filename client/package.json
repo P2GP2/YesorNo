@@ -16,6 +16,7 @@
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
     "node-ipc": "^9.1.4",
+    "sweetalert": "^2.1.2",
     "vue": "^2.6.12",
     "vue-circular-count-down-timer": "^1.0.4",
     "vue-initials-img": "^1.0.4",

@@ -38,7 +38,10 @@ io.on("connection", (socket) => {
     });
 
     if (players.every((player) => player.isReady)) {
-      io.emit("gameOn", questions[counter]);
+      io.emit("gameOn", {
+        players,
+        question: questions[counter],
+      });
     } else {
       io.emit("players", players);
     }
@@ -49,7 +52,7 @@ io.on("connection", (socket) => {
     players.forEach((player) => {
       if (player.id === socket.id) player.answer = answer;
     });
-    socket.emit("players", players);
+    io.emit("players", players);
   });
 
   // when round is timeout
@@ -58,11 +61,11 @@ io.on("connection", (socket) => {
 
     // check remain player
     if (players.length === 1) {
-      socket.emit("winner", player.name);
+      io.emit("winner", players[0].name);
       players = [];
     } else {
       counter++;
-      socket.emit("newRound", {
+      io.emit("gameOn", {
         question: questions[counter],
         players,
       });
