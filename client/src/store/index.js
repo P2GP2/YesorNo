@@ -15,6 +15,8 @@ export default new Vuex.Store({
     // divider
     isReady: false,
     timeOut: false,
+    setTime: 10,
+    isWinner: false,
   },
   mutations: {
     emptyUserId(state) {
