@@ -3,7 +3,7 @@
     class="border position-relative"
     style="height: 100vh; background-color: #f8f5f1;"
   >
-    <ul style="margin-top: 30%">
+    <ul style="margin-top: 60%">
       <li v-for="player in players" :key="player.id">
         <span :class="getListClass(player)">
           {{ player.name }}

@@ -10,6 +10,7 @@ const { getQuestions } = require("./helpers");
 let players = [],
   counter = 0;
 
+let error = true;
 const questions = getQuestions("./data/question.json");
 
 io.on("connection", (socket) => {
@@ -57,18 +58,23 @@ io.on("connection", (socket) => {
 
   // when round is timeout
   socket.on("timeOut", (trueAnswer) => {
-    players = players.filter((player) => player.answer === trueAnswer);
+    if (error) {
+      error = false;
+      players = players.filter((player) => player.answer === trueAnswer);
 
-    // check remain player
-    if (players.length === 1) {
-      io.emit("winner", players[0].name);
-      players = [];
-    } else {
-      counter++;
-      io.emit("gameOn", {
-        question: questions[counter],
-        players,
-      });
+      // check remain player
+      if (players.length === 1) {
+        io.emit("winner", players[0].name);
+        players = [];
+        counter++;
+      } else {
+        counter++;
+        error = true;
+        io.emit("gameOn", {
+          question: questions[counter],
+          players,
+        });
+      }
     }
   });
 
