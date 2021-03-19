@@ -1,6 +1,9 @@
 const app = require("express")();
 const httpServer = require("http").createServer(app);
-const io = require("socket.io")(httpServer);
+const io = require("socket.io")(httpServer, {
+  cors: true,
+  origins: ["http://localhost:8080"],
+});
 
 const { getQuestions } = require("./helpers");
 
@@ -10,18 +13,19 @@ let players = [],
 const questions = getQuestions("./data/question.json");
 
 io.on("connection", (socket) => {
-  console.log(`User ${socket.id} join the room`);
-
   // user join
   socket.on("join", (name) => {
-    players.push({
-      id: socket.id,
-      name,
-      isReady: false,
-      isAlive: false,
-      answer: true,
-    });
-    socket.emit("joined", {
+    // guard for duplicated login
+    const filteredPlayer = players.filter((player) => player.id === socket.id);
+    if (filteredPlayer.length === 0) {
+      players.push({
+        id: socket.id,
+        name,
+        isReady: false,
+        answer: true,
+      });
+    }
+    io.emit("joined", {
       userId: socket.id,
       players,
     });
@@ -34,9 +38,9 @@ io.on("connection", (socket) => {
     });
 
     if (players.every((player) => player.isReady)) {
-      socket.emit("gameOn", questions[counter]);
+      io.emit("gameOn", questions[counter]);
     } else {
-      socket.emit("players", players);
+      io.emit("players", players);
     }
   });
 

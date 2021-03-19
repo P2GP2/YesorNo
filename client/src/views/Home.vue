@@ -1,24 +1,21 @@
 <template>
   <div class="home container">
-    <!-- Button Ready & Question section -->
     <div class="d-block flex-column align-items-center">
-      <ButtonReady/>
-      <Question/>
+      <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-import ButtonReady from '@/components/ButtonReady'
-import Question from '@/components/QuestionBox'
-
 export default {
-  name: 'Home',
-  components: {
-    ButtonReady,
-    Question
-  }
-}
+  name: "Home",
+  sockets: {
+    joined(payload) {
+      this.$store.commit("joined", payload);
+    },
+    players(payload) {
+      this.$store.commit("players", payload);
+    },
+  },
+};
 </script>
