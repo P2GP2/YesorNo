@@ -1,33 +1,30 @@
 <template>
-  <div>
-    <b-button @click="isReady" variant="primary"
-    class="position-sticky"
-    v-show="!readyStatus"
-    >Hit Me to Begin!</b-button>
-    <p>Pressed State: <strong>{{ readyStatus }}</strong></p>
-  </div>
+  <b-button
+    @click="ready"
+    variant="success"
+    class="position-sticky mx-auto mt-2"
+    :disabled="isReady"
+  >
+    Ready
+  </b-button>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-    }
+  data() {
+    return {};
   },
   computed: {
-    readyStatus () {
-      return this.$store.state.isReady
-    }
+    isReady() {
+      return this.$store.getters.isReady;
+    },
   },
   methods: {
-    isReady () {
-      console.log('triggered')
-      this.$store.commit('readyButton', true)
-    }
-  }
-}
+    ready() {
+      this.$socket.emit("ready");
+    },
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

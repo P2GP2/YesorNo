@@ -33,7 +33,7 @@
   {
     userId: '',
     isGame: false,
-    isAlive: false,
+    isAlive: true,
     players: []
   }
 - Trigger "join"

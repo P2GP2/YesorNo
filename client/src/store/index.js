@@ -15,14 +15,17 @@ export default new Vuex.Store({
     questions: [],
   },
   mutations: {
+    emptyUserId(state) {
+      state.userId = "";
+    },
     joined(state, payload) {
-      state.userId = payload.userId;
+      state.userId = state.userId !== "" ? state.userId : payload.userId;
       state.players = payload.players;
     },
-    //divider
-    readyButton(state, payload) {
-      state.isReady = payload;
+    players(state, payload) {
+      state.players = payload;
     },
+    //divider
     startTime(state, payload) {
       state.timeOut = payload;
     },
@@ -33,6 +36,13 @@ export default new Vuex.Store({
   actions: {
     SOCKET_sendQuestion(context, questionData) {
       context.commit("setQuestion", questionData);
+    },
+  },
+  getters: {
+    isReady(state) {
+      return state.players.filter((player) => {
+        return player.id === state.userId;
+      })[0].isReady;
     },
   },
   modules: {},

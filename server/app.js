@@ -13,8 +13,6 @@ let players = [],
 const questions = getQuestions("./data/question.json");
 
 io.on("connection", (socket) => {
-  console.log(`User ${socket.id} join the room`);
-
   // user join
   socket.on("join", (name) => {
     // guard for duplicated login
@@ -24,7 +22,6 @@ io.on("connection", (socket) => {
         id: socket.id,
         name,
         isReady: false,
-        isAlive: false,
         answer: true,
       });
     }
@@ -41,9 +38,9 @@ io.on("connection", (socket) => {
     });
 
     if (players.every((player) => player.isReady)) {
-      socket.emit("gameOn", questions[counter]);
+      io.emit("gameOn", questions[counter]);
     } else {
-      socket.emit("players", players);
+      io.emit("players", players);
     }
   });
 

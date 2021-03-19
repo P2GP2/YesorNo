@@ -26,6 +26,7 @@ export default {
   },
   methods: {
     onSubmit() {
+      this.$store.commit("emptyUserId");
       this.$socket.emit("join", this.name);
       this.name = "";
       setTimeout(() => {
