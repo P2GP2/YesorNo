@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "question": "Tokopedia didirikan pada 6 Februari 2009",
+    "statement": "Tokopedia didirikan pada 6 Februari 2009",
+    "answer": true
+  },
+  {
+    "id": 2,
+    "question": "Gojek didirikan pada tahun 2010",
+    "statement": "Gojek didirikan pada tahun 2010",
+    "answer": true
+  },
+  {
+    "id": 3,
+    "question": "Liverpool memenangkan final Piala FA 1986",
+    "statement": "Liverpool memenangkan final Piala FA 1986",
+    "answer": true
+  },
+  {
+    "id": 4,
+    "question": "Oliver Khan memegang rekor untuk memenangkan caps terbanyak untuk Inggris, memenangkan 125 caps dalam karir bermainnya",
+    "statement": "Peter Shilton memegang rekor untuk memenangkan caps terbanyak untuk Inggris, memenangkan 125 caps dalam karir bermainnya",
+    "answer": false
+  },
+  {
+    "id": 5,
+    "question": "Gianfranco Zola yang mengelola West Ham United antara 2000 dan 2002",
+    "statement": "Gianfranco Zola yang mengelola West Ham United antara 2008 dan 2010",
+    "answer": false
+  },
+  {
+    "id": 6,
+    "question": "Nama tengah Sir Alex Ferguson adalah Dune",
+    "statement": "Nama tengah Sir Alex Ferguson adalah Chapman",
+    "answer": false
+  },
+  {
+    "id": 7,
+    "question": "Titanic tenggelam di Samudra Atlantik pada 15 April 1912, dalam pelayaran perdananya dari Southampton",
+    "statement": "Titanic tenggelam di Samudra Atlantik pada 15 April 1912, dalam pelayaran perdananya dari Southampton",
+    "answer": true
+  },
+  {
+    "id": 8,
+    "question": "Film Carry On pertama yang dibuat dan dirilis pada tahun 1958 berjudul Bawang",
+    "statement": "Film Carry On pertama yang dibuat dan dirilis pada tahun 1958 berjudul Bawa Sersan",
+    "answer": false
+  },
+  {
+    "id": 9,
+    "question": "Perusahaan teknologi terbesar di Korea Selatan adalah Hyundai",
+    "statement": "Perusahaan teknologi terbesar di Korea Selatan adalah Samsung",
+    "answer": false
+  },
+  {
+    "id": 10,
+    "question": "Penyanyi Dave Bartram memimpin grup pop tahun 1970-an Showaddywaddy",
+    "statement": "Penyanyi Dave Bartram memimpin grup pop tahun 1970-an Showaddywaddy",
+    "answer": true
+  },
+  {
+    "id": 11,
+    "question": "Koki TV Jamie Oliver yang sekarang terkenal mulai memasak pada usia delapan di pub orang tuanya, 'The Cricketers', di Clavering, Essex",
+    "statement": "Koki TV Jamie Oliver yang sekarang terkenal mulai memasak pada usia delapan di pub orang tuanya, 'The Cricketers', di Clavering, Essex",
+    "answer": true
+  },
+  {
+    "id": 12,
+    "question": "Pemain dart Belanda Christian Kist memenangkan Kejuaraan Dunia BDO 2012 di Lakeside Country Club, Frimley Green pada 15 Januari",
+    "statement": "Pemain dart Belanda Christian Kist memenangkan Kejuaraan Dunia BDO 2012 di Lakeside Country Club, Frimley Green pada 15 Januari",
+    "answer": true
+  },
+  {
+    "id": 13,
+    "question": "Penyani John Lemon adalah Vokalis The Beetles",
+    "statement": "Penyani John Lennon adalah Vokalis The Beetles",
+    "answer": false
+  },
+  {
+    "id": 14,
+    "question": "Candi Borobudur dibuat dalam semalam",
+    "statement": "Candi Prambanan dibuat dalam semalam oleh Bandung Banaspati",
+    "answer": false
+  },
+  {
+    "id": 15,
+    "question": "Jumlah provinsi di Indonesia sekarang berjumlah 33",
+    "statement": "Jumlah provinsi di Indonesia sekarang adalah 34",
+    "answer": false
+  },
+  {
+    "id": 16,
+    "question": "Kalimantan adalah pulau terbesar di dunia",
+    "statement": "Pulau terbesar di dunia adalah Greenland",
+    "answer": false
+  },
+  {
+    "id": 17,
+    "question": "Stephen Strange adalah ahli dokter bedah trauma",
+    "statement": "Stephen Strange adalah ahli dokter bedah syaraf",
+    "answer": false
+  },
+  {
+    "id": 18,
+    "question": "Film Iron Man pertama kali dirilis tahun 2008, memulai Marvel Cinematic Universe",
+    "statement": "Film Iron Man pertama kali dirilis tahun 2008, memulai Marvel Cinematic Universe",
+    "answer": true
+  },
+  {
+    "id": 19,
+    "question": "Nama palu Thor adalah Vanir",
+    "statement": "Nama palu Thor adalah Mjolnir",
+    "answer": false
+  },
+  {
+    "id": 20,
+    "question": "Perisai Captain America terbuat dari Adamantium",
+    "statement": "Perisai Captain America terbuat dari Vibranium",
+    "answer": false
+  },
+  {
+    "id": 21,
+    "question": "The Flerkens adalah ras alien yang sangat berbahaya yang menyerupai Kucing",
+    "statement": "The Flerkens adalah ras alien yang sangat berbahaya yang menyerupai Kucing",
+    "answer": true
+  },
+  {
+    "id": 22,
+    "question": "Sebelum menjadi Vision, butler AI Iron Man bernama Jarvis",
+    "statement": "Sebelum menjadi Vision, butler AI Iron Man bernama Jarvis",
+    "answer": true
+  },
+  {
+    "id": 23,
+    "question": "Nama asli Black Panther adalah T'Challa",
+    "statement": "Nama asli Black Panther adalah T'Challa",
+    "answer": true
+  },
+  {
+    "id": 24,
+    "question": "Ras alien yang dikirim Loki untuk menyerang Bumi The Avengers bernama The Flerkens",
+    "statement": "Ras alien yang dikirim Loki untuk menyerang Bumi The Avengers bernama The Chitauri",
+    "answer": false
+  },
+  {
+    "id": 25,
+    "question": "Natalie Rushman adalah nama palsu yang digunakan Natasha saat pertama kali bertemu Tony",
+    "statement": "Natalie Rushman adalah nama palsu yang digunakan Natasha saat pertama kali bertemu Tony",
+    "answer": true
+  },
+  {
+    "id": 26,
+    "question": "Hawkeye dan Black Widow sering bernostalgia tentang kota Budapest",
+    "statement": "Hawkeye dan Black Widow sering bernostalgia tentang kota Budapest",
+    "answer": true
+  },
+  {
+    "id": 27,
+    "question": "Saudara perempuan Black Panther adalah Nakia",
+    "statement": "Saudara perempuan Black Panther adalah Shuri",
+    "answer": false
+  },
+  {
+    "id": 28,
+    "question": "Gunung Semeru adalah gunung tertinggi ke-2 di Indonesia",
+    "statement": "Gunung tertinggi ke-3 di Indonesia adalah Gunung Kerinci",
+    "answer": false
+  },
+  {
+    "id": 29,
+    "question": "Avatar the Legend of Aang adalah kartun buatan Jepang",
+    "statement": "Avatar the Legend of Aang adalah kartun buatan Amerika",
+    "answer": false
+  },
+  {
+    "id": 30,
+    "question": "Sungai Kapuas adalah sungai terpanjang di Indonesia",
+    "statement": "Sungai Kapuas adalah sungai terpanjang di Indonesia",
+    "answer": true
+  },
+  {
+    "id": 31,
+    "question": "Indonesia pernah mengikuti piala dunia sepak bola, yaitu pada tahun 1939",
+    "statement": "Indonesia pernah mengikuti piala dunia sepak bola pada tahun 1938",
+    "answer": false
+  },
+  {
+    "id": 32,
+    "question": "Hukum Newton III, berbunyi 'Jika benda A mengerjakan gaya pada benda B, maka benda B akan mengerjakan gaya pada benda A, yang besarnya sama tetapi arahnya berlawanan'",
+    "statement": "Hukum Newton III, berbunyi 'Jika benda A mengerjakan gaya pada benda B, maka benda B akan mengerjakan gaya pada benda A, yang besarnya sama tetapi arahnya berlawanan'",
+    "answer": true
+  },
+  {
+    "id": 33,
+    "question": "Jumlah episode sinetron Cinta Fitri adalah 1002",
+    "statement": "Jumlah episode sinetron Cinta Fitri adalah 1002",
+    "answer": true
+  },
+  {
+    "id": 34,
+    "question": "Google lahir pada 4 September 1988",
+    "statement": "Google lahir pada 4 September 1998",
+    "answer": false
+  },
+  {
+    "id": 35,
+    "question": "Facebook didirikan pad 4 Februari 2004 di Cambridge, Massachusetts",
+    "statement": "Facebook didirikan pad 4 Februari 2004 di Cambridge, Massachusetts",
+    "answer": true
+  },
+  {
+    "id": 36,
+    "question": "Chirtopher Colombus adalah penemu benua Australia",
+    "statement": "Chirtopher Colombus adalah penemu benua Amerika",
+    "answer": false
+  },
+  {
+    "id": 37,
+    "question": "WHO adalah badan yang mengurusin kesehatan dunia",
+    "statement": "WHO adalah badan yang mengurusin kesehatan dunia",
+    "answer": true
+  },
+  {
+    "id": 38,
+    "question": "jepang menjajah indonesia selama 350 tahun",
+    "statement": "Belanda menjajah indonesia selama 350 tahun",
+    "answer": false
+  },
+  {
+    "id": 39,
+    "question": "asia adalah benua terluas didunia",
+    "statement": "asia adalah benua terluas didunia",
+    "answer": true
+  },
+  {
+    "id": 40,
+    "question": "gurun samuso adalah nama gurun terluas didunia",
+    "statement": "gurun sahara adalah nama gurun terluas didunia",
+    "answer": false
+  },
+  {
+    "id": 41,
+    "question": "mamalia terbesar didunia adalah paus",
+    "statement": "mamalia terbesar didunia adalah paus",
+    "answer": true
+  },
+  {
+    "id": 42,
+    "question": "batu terkeras didunia adalah batu ginjal",
+    "statement": "batu terkeras didunia adalah batu intan",
+    "answer": false
+  },
+  {
+    "id": 43,
+    "question": "SEA games diadakan tiap 2 tahun sekali",
+    "statement": "SEA games diadakan tiap 2 tahun sekali",
+    "answer": true
+  },
+  {
+    "id": 44,
+    "question": "Thomas alpha edison adalah penemu minyak rambut",
+    "statement": "Thomas alpha edison adalah penemu Lampu",
+    "answer": false
+  },
+  {
+    "id": 45,
+    "question": "Owens Illionis Glass adalah penemu fiber optik",
+    "statement": "Owens Illionis Glass adalah penemu fiber optik",
+    "answer": true
+  },
+  {
+    "id": 46,
+    "question": "sungai kaliawi adalah sungai terpanjang diindonesia",
+    "statement": "sungai kapuas adalah sungai terpanjang diindonesia",
+    "answer": false
+  },
+  {
+    "id": 47,
+    "question": "Miopi adalah sebutan untuk penyakit mata rabun dekat",
+    "statement": "Miopi adalah sebutan untuk penyakit mata rabun dekat",
+    "answer": true
+  },
+  {
+    "id": 48,
+    "question": "2G adalah sebutan untuk koneksi jarigan sebelum 3G",
+    "statement": "GPRS adalah sebutan untuk koneksi jarigan sebelum 3G",
+    "answer": false
+  },
+  {
+    "id": 49,
+    "question": "Dinar adalah mata uang negara irak",
+    "statement": "Dinar adalah mata uang negara irak",
+    "answer": true
+  },
+  {
+    "id": 50,
+    "question": "uni soviet / russia adalah pulau terbesar didunia",
+    "statement": "Greenland adalah pulau terbesar didunia",
+    "answer": false
+  },
+  {
+    "id": 51,
+    "question": "Ichtiologi adalah ilmu yang mempelajari tentang ikan",
+    "statement": "Ichtiologi adalah ilmu yang mempelajari tentang ikan",
+    "answer": true
+  },
+  {
+    "id": 52,
+    "question": "mamalia adalah sebutan untuk hewan yang tinggal di air dan didarat",
+    "statement": "afmibi adalah sebutan untuk hewan yang tinggal di air dan didarat",
+    "answer": false
+  },
+  {
+    "id": 53,
+    "question": "alat yang digunakan untuk mengukur kecepatan disebut spedometer",
+    "statement": "alat yang digunakan untuk mengukur kecepatan disebut spedometer",
+    "answer": true
+  },
+  {
+    "id": 54,
+    "question": "canada adalah ibukota negara inggir",
+    "statement": "london adalah ibukota negara inggir",
+    "answer": false
+  },
+  {
+    "id": 55,
+    "question": "Leonardo DiCaprio adalah pemeran Jack Dawson dalam film Titanic",
+    "statement": "Leonardo DiCaprio adalah pemeran Jack Dawson dalam film Titanic",
+    "answer": true
+  }
+]
